@@ -114,5 +114,44 @@ button svg {
 }
 
 .box {
-  justify-content: center;
+  transition: opacity 3s;
+  opacity: 1;
+}
+
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.animate {
+  transition: transform 0.35s ease-in-out;
+}
+
+.animate.grow {
+  transform: scale(1.5);
+}
+
+.storybox {
+  width: 300px;
+}
+
+.messageout-enter {
+  opacity: 0.01;
+}
+
+/* ending ENTER animation */
+.messageout-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+/* starting EXIT animation */
+.messageout-exit {
+  opacity: 1;
+}
+
+/* ending EXIT animation */
+.messageout-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
