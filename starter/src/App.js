@@ -250,6 +250,8 @@ export default function App() {
       setAnimate(!animate);
     } else {
       setShowScore(true);
+      setCurrentQuestion(0);
+      setCurrentStory(0);
     }
   };
 
