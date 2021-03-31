@@ -95,10 +95,6 @@ button {
   background-color: #ff3333;
 }
 
-button:hover {
-  background-color: #555e7d;
-}
-
 button:focus {
   outline: none;
 }
@@ -135,23 +131,18 @@ button {
   width: 300px;
 }
 
-.messageout-enter {
+/* .messageout-enter {
   opacity: 0.01;
 }
-
-/* ending ENTER animation */
 .messageout-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-/* starting EXIT animation */
 .messageout-exit {
   opacity: 1;
 }
-
-/* ending EXIT animation */
 .messageout-exit-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
-}
+} */

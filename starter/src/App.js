@@ -255,60 +255,60 @@ export default function App() {
 
   return (
     <div className="app">
-      <TransitionGroup>
-        <CSSTransition key={animation} timeout={1000} classNames="messageout">
-          {showScore ? (
-            <div>
-              <div className="score-section">
-                Well done! You got all the questions correct! Combination for
-                the safe is 020521
-              </div>
-              <button onClick={resetQuiz}>Start Again</button>
+      {/* <TransitionGroup>
+        <CSSTransition key={animation} timeout={1000} classNames="messageout"> */}
+      {showScore ? (
+        <div>
+          <div className="score-section">
+            Well done! You got all the questions correct! Combination for the
+            safe is 020521
+          </div>
+          <button onClick={resetQuiz}>Start Again</button>
+        </div>
+      ) : storyTime ? (
+        <div className={animation ? "box" : "box"}>
+          <img className="photo" src={story[currentStory].image} />
+          <div className="storybox">
+            <p>{story[currentStory]?.storyText}</p>
+            <button onClick={nextQuestionHandler}>Next Question</button>
+          </div>
+        </div>
+      ) : (
+        <div className="box">
+          <div>
+            <img className="photo" src={questions[currentQuestion].image} />
+          </div>
+          <div className="question-section">
+            <div className="question-count">
+              <span>Question {currentQuestion + 1}</span>/{questions.length}
             </div>
-          ) : storyTime ? (
-            <div className={animation ? "box" : "box"}>
-              <img className="photo" src={story[currentStory].image} />
-              <div className="storybox">
-                <p>{story[currentStory]?.storyText}</p>
-                <button onClick={nextQuestionHandler}>Next Question</button>
-              </div>
+            <div className="question-text">
+              {questions[currentQuestion].questionText}
             </div>
-          ) : (
-            <div className="box">
-              <div>
-                <img className="photo" src={questions[currentQuestion].image} />
-              </div>
-              <div className="question-section">
-                <div className="question-count">
-                  <span>Question {currentQuestion + 1}</span>/{questions.length}
+          </div>
+          <div className="answer-section">
+            {questions[currentQuestion].answerOptions.map(
+              (answerOption, index) => (
+                <div>
+                  <button
+                    className={classNames(
+                      styles.animate,
+                      animate && styles.grow
+                    )}
+                    onClick={() =>
+                      handleAnswerButtonClick(answerOption.isCorrect)
+                    }
+                  >
+                    {answerOption.answerText}
+                  </button>
                 </div>
-                <div className="question-text">
-                  {questions[currentQuestion].questionText}
-                </div>
-              </div>
-              <div className="answer-section">
-                {questions[currentQuestion].answerOptions.map(
-                  (answerOption, index) => (
-                    <div>
-                      <button
-                        className={classNames(
-                          styles.animate,
-                          animate && styles.grow
-                        )}
-                        onClick={() =>
-                          handleAnswerButtonClick(answerOption.isCorrect)
-                        }
-                      >
-                        {answerOption.answerText}
-                      </button>
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-          )}
-        </CSSTransition>
-      </TransitionGroup>
+              )
+            )}
+          </div>
+        </div>
+      )}
+      {/* </CSSTransition>
+      </TransitionGroup> */}
     </div>
   );
 }
