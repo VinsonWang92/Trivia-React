@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import photo1 from "./images/1.JPG";
 import photo2 from "./images/2.JPG";
 import photo3 from "./images/3.JPG";
@@ -263,7 +262,7 @@ export default function App() {
       {showScore ? (
         <div>
           <div className="score-section">
-            <img className="photo" src={final} alt="final picture"/>
+            <img className="photo" src={final} alt="final"/>
             Well done Bubba! You got all the questions correct! Combination for the
             safe is 0405
           </div>
