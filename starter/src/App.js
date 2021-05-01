@@ -26,6 +26,7 @@ import photo5 from "./images/5.JPG";
 import photo11 from "./images/11.JPG";
 import styles from "./index.css";
 import classNames from "classnames";
+import final from "./images/final.JPG"
 
 export default function App() {
   const questions = [
@@ -262,6 +263,7 @@ export default function App() {
       {showScore ? (
         <div>
           <div className="score-section">
+            <img className="photo" src={final}/>
             Well done! You got all the questions correct! Combination for the
             safe is 020521
           </div>

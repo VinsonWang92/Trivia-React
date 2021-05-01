@@ -44,6 +44,11 @@ export default function App() {
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 
+	const reset = () => {
+		setCurrentQuestion(0);
+		setShowScore(false)
+		setScore(0)
+	}
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
 			setScore(score + 1);
@@ -61,6 +66,7 @@ export default function App() {
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
+					<button onClick={reset}>reset</button>
 				</div>
 			) : (
 				<>
