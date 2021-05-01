@@ -263,7 +263,7 @@ export default function App() {
       {showScore ? (
         <div>
           <div className="score-section">
-            <img className="photo" src={final}/>
+            <img className="photo" src={final} alt="final picture"/>
             Well done! You got all the questions correct! Combination for the
             safe is 0405
           </div>
