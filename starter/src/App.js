@@ -265,7 +265,7 @@ export default function App() {
           <div className="score-section">
             <img className="photo" src={final}/>
             Well done! You got all the questions correct! Combination for the
-            safe is 020521
+            safe is 0405
           </div>
           <button onClick={resetQuiz}>Start Again</button>
         </div>
