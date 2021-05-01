@@ -261,10 +261,10 @@ export default function App() {
         <CSSTransition key={animation} timeout={1000} classNames="messageout"> */}
       {showScore ? (
         <div>
-          <div className="score-section">
-            <img className="photo" src={final} alt="final"/>
-            Well done Bubba! You got all the questions correct! Combination for the
-            safe is 0405
+          <div className="score-section" style={{display: 'block'}}>
+            <img className="photo" src={final} style={{}} alt="final"/>
+            <div>Well done Bubba! You got all the questions correct! Combination for the
+            safe is 0405</div>
           </div>
           <button onClick={resetQuiz}>Start Again</button>
         </div>
